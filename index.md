@@ -1,3 +1,7 @@
+---
+title: Chalmers Bike Project
+---
+
 # Welcome to the Chalmers Bike Project
 
 This website is here to showcase our progress and post any interesting results.

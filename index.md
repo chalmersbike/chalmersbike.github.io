@@ -6,15 +6,15 @@ title: Chalmers Bike Project
 
 This website is here to showcase our progress and post any interesting results.
 
-# [Project Overview](overview.html)
+* ## [Project Overview](overview.html)
 
-# [Electronic Design](electronics.html)
+* ## [Electronic Design](electronics.html)
 
-# [Mechanical Design](mechanical.html)
+* ## [Mechanical Design](mechanical.html)
 
-# [Control](control.html)
+* ## [Control](control.html)
 
-# [How-To Guides](howto.html)
+* ## [How-To Guides](howto.html)
 
 
 ## Special Thanks

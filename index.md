@@ -17,11 +17,6 @@ This website is here to showcase our progress and post any interesting results.
 * ## [How-To Guides](howto.html)
 
 
-## Special Thanks
-* Felix Mannerhagen
-* Jonathan Lock
-* Niclas Hillborg
-
 ## Contributors
 * Axel Davíð Ingólfsson
 * Boaz Ash
@@ -30,3 +25,10 @@ This website is here to showcase our progress and post any interesting results.
 * Lucas Jansson
 * Umur Erdinç
 * Venkatraman Nagaraj
+
+## Special Thanks
+* Felix Mannerhagen
+* Jonathan Lock
+* Niclas Hillborg
+* Robert Karlsson
+* Jan Möller

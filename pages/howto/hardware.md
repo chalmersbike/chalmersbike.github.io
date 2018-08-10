@@ -1,9 +1,9 @@
 ---
 title: How To - Hardware
 ---
+Table of Contents
+-----------------
 <!--ts-->
-      * [title: How To - Hardware](#title-how-to---hardware)
-      * [Table of Contents](#table-of-contents)
    * [How to turn the system on/off](#how-to-turn-the-system-onoff)
    * [How to stop in an emergency](#how-to-stop-in-an-emergency)
       * [Press the E-STOP button](#press-the-e-stop-button)
@@ -13,16 +13,6 @@ title: How To - Hardware
 <!-- Added by: Boaz Ash, at: 2018-08-10T16:47+02:00 -->
 
 <!--te-->
-
-Table of Contents
------------------
-
-[**How to turn the system on/off**](#how-to-turn-the-system-onoff)
-
-[**How to stop in an emergency**](#how-to-stop-in-an-emergency)
-
-[**How to charge the batteries**](#how-to-charge-the-batteries)
-
 
 # How to turn the system on/off
 

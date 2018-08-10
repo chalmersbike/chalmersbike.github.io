@@ -1,9 +1,9 @@
 ---
 title: How To - Software
 ---
+Table of Contents
+-----------------
 <!--ts-->
-      * [title: How To - Software](#title-how-to---software)
-      * [Table of Contents](#table-of-contents)
    * [How to share internet with the BeagleBone via USB on Windows](#how-to-share-internet-with-the-beaglebone-via-usb-on-windows)
    * [How to upload code to the BeagleBone from Pycharm](#how-to-upload-code-to-the-beaglebone-from-pycharm)
    * [How to start an ssh session with the BeagleBone](#how-to-start-an-ssh-session-with-the-beaglebone)
@@ -15,8 +15,7 @@ title: How To - Software
 
 <!--te-->
 
-Table of Contents
------------------
+
 
 [**How to share internet with the BeagleBone via USB on Windows**](#how-to-share-internet-with-the-beaglebone-via-usb-on-windows)
 

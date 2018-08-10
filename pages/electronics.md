@@ -3,7 +3,6 @@ title: Electronics
 ---
 
 <!--ts-->
-      * [title: Electronics](#title-electronics)
    * [Overview:](#overview)
    * [Components](#components)
       * [Enclosure Overview](#enclosure-overview)

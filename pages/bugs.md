@@ -2,7 +2,6 @@
 title: Bugs and Troubleshooting
 ---
 <!--ts-->
-      * [title: Bugs and Troubleshooting](#title-bugs-and-troubleshooting)
    * [IMU waiting for calibration](#imu-waiting-for-calibration)
    * [Manually entering virtualenv](#manually-entering-virtualenv)
    * [Replacing fuses](#replacing-fuses)

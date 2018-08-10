@@ -2,6 +2,13 @@
 title: Mechanical Design
 ---
 <!--ts-->
+      * [title: Mechanical Design](#title-mechanical-design)
+   * [Steering Motor](#steering-motor)
+      * [Mounting](#mounting)
+   * [Magnets for Hall Sensor](#magnets-for-hall-sensor)
+
+<!-- Added by: Boaz Ash, at: 2018-08-10T16:47+02:00 -->
+
 <!--te-->
 
 # Steering Motor

@@ -2,6 +2,17 @@
 title: How To - Software
 ---
 <!--ts-->
+      * [title: How To - Software](#title-how-to---software)
+      * [Table of Contents](#table-of-contents)
+   * [How to share internet with the BeagleBone via USB on Windows](#how-to-share-internet-with-the-beaglebone-via-usb-on-windows)
+   * [How to upload code to the BeagleBone from Pycharm](#how-to-upload-code-to-the-beaglebone-from-pycharm)
+   * [How to start an ssh session with the BeagleBone](#how-to-start-an-ssh-session-with-the-beaglebone)
+   * [How to run code on the BeagleBone](#how-to-run-code-on-the-beaglebone)
+            * [Example: we have a testing script in the testing/rear_motor folder](#example-we-have-a-testing-script-in-the-testingrear_motor-folder)
+   * [How to download results from the BeagleBone](#how-to-download-results-from-the-beaglebone)
+
+<!-- Added by: Boaz Ash, at: 2018-08-10T16:47+02:00 -->
+
 <!--te-->
 
 Table of Contents

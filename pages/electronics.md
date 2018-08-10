@@ -3,6 +3,7 @@ title: Electronics
 ---
 
 <!--ts-->
+      * [title: Electronics](#title-electronics)
    * [Overview:](#overview)
    * [Components](#components)
       * [Enclosure Overview](#enclosure-overview)
@@ -12,9 +13,11 @@ title: Electronics
          * [Arduino Uno](#arduino-uno)
          * [MSP430](#msp430)
       * [Safety Relay](#safety-relay)
+   * [Steering Motor Configuration](#steering-motor-configuration)
+   * [Longitudinal Motor configuration](#longitudinal-motor-configuration)
    * [Future Work](#future-work)
 
-<!-- Added by: Boaz Ash, at: 2018-08-10T15:11+02:00 -->
+<!-- Added by: Boaz Ash, at: 2018-08-10T16:46+02:00 -->
 
 <!--te-->
 

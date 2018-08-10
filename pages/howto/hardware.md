@@ -1,6 +1,8 @@
 ---
 title: How To - Hardware
 ---
+<!--ts-->
+<!--te-->
 
 Table of Contents
 -----------------

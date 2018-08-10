@@ -1,3 +1,7 @@
+---
+title: Mechanical Design
+---
+
 # Steering Motor
 
 The steering motor used is a **Maxon DCX 32 L 24V**. 

@@ -1,3 +1,7 @@
+---
+title: How To - Hardware
+---
+
 Table of Contents
 -----------------
 

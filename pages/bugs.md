@@ -1,3 +1,7 @@
+---
+title: Bugs and Troubleshooting
+---
+
 # IMU waiting for calibration
 
 # Manually entering virtualenv

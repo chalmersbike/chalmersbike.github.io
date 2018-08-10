@@ -1,3 +1,7 @@
+---
+title: Electronics
+---
+
 <!--ts-->
    * [Overview:](#overview)
    * [Components](#components)

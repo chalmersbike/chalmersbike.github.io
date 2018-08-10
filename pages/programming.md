@@ -2,7 +2,6 @@
 title: Programming
 ---
 <!--ts-->
-      * [title: Programming](#title-programming)
    * [Motor Control - MSP430](#motor-control---msp430)
       * [How it works](#how-it-works)
       * [Important information](#important-information)

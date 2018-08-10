@@ -1,6 +1,8 @@
 ---
 title: How To - Software
 ---
+<!--ts-->
+<!--te-->
 
 Table of Contents
 -----------------

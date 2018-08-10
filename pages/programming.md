@@ -1,6 +1,8 @@
 ---
 title: Programming
 ---
+<!--ts-->
+<!--te-->
 
 # Motor Control - MSP430
 

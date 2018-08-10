@@ -1,3 +1,7 @@
+---
+title: Programming
+---
+
 # Motor Control - MSP430
 
 ## How it works

@@ -2,6 +2,8 @@
 Title: How To Guides
 ---
 
-Hardware
-Software
-Testing
+* ## [How To: Hardware](hardware.html)
+
+* ## [How To: Software](software.html)
+
+* ## [How To: Testing](testing.html)

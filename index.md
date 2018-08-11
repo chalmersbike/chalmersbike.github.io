@@ -16,7 +16,7 @@ This website is here to showcase our progress and post any interesting results.
 
 * ## [Control](pages/control.html)
 
-* ## [How-To Guides](pages/howto/index.html)
+* ## [How-To Guides](pages/howto/)
 
 * ## [Bugs and Troubleshooting](pages/bugs.html)
 

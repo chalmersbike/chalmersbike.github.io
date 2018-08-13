@@ -1,6 +1,8 @@
 ---
 title: How To - Hardware
 ---
+[Home](https://chalmersbike.github.io)
+
 Table of Contents
 -----------------
 <!--ts-->

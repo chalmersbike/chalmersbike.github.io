@@ -39,12 +39,12 @@ Table of Contents
 
 3. Right click on the BeagleBone network adaptor and choose `Properties`. The correct adaptor can be identified by its device name, look for:  `Linux USB Ethernet/RNDIS Gadget` 
 
-<p align="center"><img src="https://github.com/bababash/chalmersbike/blob/master/wiki/howto/BBB_NetworkConfig_2.JPG" width="400"></p>
+<p align="center"><img src="../../images/BBB_NetworkConfig_2.JPG" width="400"></p>
 
 
 4. Modify the settings so they match this image and press OK.
 
-<p align="center"><img src="https://github.com/bababash/chalmersbike/blob/master/wiki/howto/BBB_NetworkConfig.JPG" width="400"></p>
+<p align="center"><img src="../../images/BBB_NetworkConfig.JPG" width="400"></p>
 
 5. Close the Properties window
 
@@ -52,7 +52,7 @@ Table of Contents
 
 7. Select the `Sharing` tab and modify the settings so they match this image and press OK. If prompted to change the IP of the Beaglebone, press Yes. You may have to repeat step 4 to get it working.
 
-<p align="center"><img src="https://github.com/bababash/chalmersbike/blob/master/wiki/howto/BBB_NetworkConfig_3.JPG" width="400"></p>
+<p align="center"><img src="../../images/BBB_NetworkConfig_3.JPG" width="400"></p>
 
 8. SSH into the Beaglebone and run the script `usb_internet.sh` located in the root directory of this repo.
 

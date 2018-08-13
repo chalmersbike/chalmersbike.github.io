@@ -6,7 +6,7 @@ title: Overview
 
 This document is a work in progress with the eventual hope that the project details and procedures will be posted here in their entirety.
 
-![Chalmersbike](https://github.com/bababash/chalmersbike/blob/master/wiki/Skeppshult%20CYK%20EL%207.jpg)
+![Chalmersbike](../images/skeppshultbike.jpg)
 
 ## Project Goals:
 

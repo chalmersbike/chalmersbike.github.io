@@ -1,6 +1,8 @@
 ---
 Title: How To Guides
 ---
+[Home](https://chalmersbike.github.io)
+
 
 * ## [How To: Hardware](hardware.html)
 

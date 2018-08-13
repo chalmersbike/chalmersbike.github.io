@@ -18,7 +18,7 @@ Table of Contents
 
 The diagram below shows all the components required to turn on the bike:
 
-<p align="center"><img src="../../images/PowerONAnnotation.jpg" /></p>
+<p align="center"><img src="../../images/PowerOnAnnotation.jpg" /></p>
 
 Battery connection detail:
 

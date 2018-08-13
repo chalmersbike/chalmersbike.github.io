@@ -1,8 +1,9 @@
 ---
 title: Overview
 ---
+[Home](https://chalmersbike.github.io)
 
-# Welcome to the chalmersbike wiki!
+# Project Overview
 
 This document is a work in progress with the eventual hope that the project details and procedures will be posted here in their entirety.
 

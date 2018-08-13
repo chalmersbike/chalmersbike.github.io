@@ -18,11 +18,11 @@ Table of Contents
 
 The diagram below shows all the components required to turn on the bike:
 
-<p align="center"><img src="https://github.com/chalmersbike/chalmersbike/raw/master/wiki/howto/Power%20ON%20Annotation.jpg" /></p>
+<p align="center"><img src="../images/PowerONAnnotation.jpg" /></p>
 
 Battery connection detail:
 
-<img src="https://github.com/chalmersbike/chalmersbike/raw/master/wiki/howto/battery_connect.jpg" width="400" />
+<img src="../images/battery_connect.jpg" width="400" />
 
 | Powering **ON** |
 |-------------|
@@ -43,7 +43,7 @@ If you will be using the bike for an extended period of time (>1h) it is importa
 
 |Battery Voltage Monitor | Battery Voltage Monitors in place |
 :-------------------------:|:-------------------------:
-<img src="https://github.com/bababash/chalmersbike/blob/master/wiki/howto/voltage_monitor.jpg" width="400" />  |  <img src="https://github.com/bababash/chalmersbike/blob/master/wiki/howto/voltage_monitor_2.jpg" width="400" />
+<img src="../images/voltage_monitor.jpg" width="400" />  |  <img src="../images/voltage_monitor_2.jpg" width="400" />
 
 Connect the negative end labelled with a MINUS (-) symbol to the black wire of the battery JST-XH balance connector (pictured on the right). The buzzer will beep when you first connect it and it will beep continuously (to warn you!) if the voltage drops beyond the set limit. If it starts beeping, disconnect immediately and charge the battery.
 
@@ -54,7 +54,7 @@ The bike has a category 4 emergency stop system. When you press the emergency st
 
 ## Press the E-STOP button
 
-<p align="center"><img src="https://github.com/bababash/chalmersbike/blob/master/wiki/howto/emergency_stop.jpg" width="400"></p>
+<p align="center"><img src="../images/emergency_stop.jpg" width="400"></p>
 
 # How to charge the batteries
 
@@ -64,13 +64,13 @@ We have one battery in use at the moment:
 
 | MultiStar High Capacity 12000mAh 6S 10C Multi-Rotor Lipo Pack |
 |-------------------------|
-|<p align="center"><img src="https://github.com/bababash/chalmersbike/blob/master/wiki/howto/6sLiPo.jpg" width="400" /></p>|
+|<p align="center"><img src="../images/6sLiPo.jpg" width="400" /></p>|
 | 6 cells |
 
 
 This is our charger. It is able to balance charge our batteries which ensures no individual cell gets over/under charged.
 
-<img src="https://github.com/bababash/chalmersbike/blob/master/wiki/howto/charger.jpg" width="400">
+<img src="../images/charger.jpg" width="400">
 
 ### To charge the batteries:
 
@@ -83,13 +83,13 @@ This is our charger. It is able to balance charge our batteries which ensures no
       * Increase the current to 6.0A and press ENTER
       * Select 6S
 
-<p align="center"><img src="https://github.com/bababash/chalmersbike/blob/master/wiki/howto/charger_6s.jpg" width="400"></p>
+<p align="center"><img src="../images/charger_6s.jpg" width="400"></p>
 
    * If you are charging the 3S battery
       * Increase the current to 2.5A and press ENTER
       * Select 3s
 
-<p align="center"><img src="https://github.com/bababash/chalmersbike/blob/master/wiki/howto/charger_3s.jpg" width="400"></p>
+<p align="center"><img src="../images/charger_3s.jpg" width="400"></p>
 
 6. Press and hold ENTER. The verification screen will appear
 7. Verify that you did it right

@@ -23,7 +23,7 @@ The output shaft of the motor/gearbox combination has a diameter of 10 mm. The b
 
 We designed a custom mount that allows the motor and gearbox to be mounted parallel to the steering axis. The shaft of the motor and the bike stem have belt pulleys attached and they are linked with a toothed belt. 
 
-![Motor Mount](https://github.com/bababash/chalmersbike/blob/ca95ca650d8a636f9712292e4da3903c1294229d/wiki/Mechanical_MotorMount.jpg)
+![Motor Mount](../images/steering_motor_mount.jpg)
 
 # Magnets for Hall Sensor
 

@@ -1,6 +1,8 @@
 ---
 title: How To - Software
 ---
+[Home](https://chalmersbike.github.io)
+
 Table of Contents
 -----------------
 <!--ts-->
@@ -14,18 +16,6 @@ Table of Contents
 <!-- Added by: Boaz Ash, at: 2018-08-10T16:47+02:00 -->
 
 <!--te-->
-
-
-
-[**How to share internet with the BeagleBone via USB on Windows**](#how-to-share-internet-with-the-beaglebone-via-usb-on-windows)
-
-[**How to upload code to the BeagleBone from Pycharm**](#how-to-upload-code-to-the-beaglebone-from-pycharm)
-
-[**How to start an ssh session with the BeagleBone**](#how-to-start-an-ssh-session-with-the-beaglebone)
-
-[**How to run code on the BeagleBone**](#how-to-run-code-on-the-beaglebone)
-
-[**How to download results from the BeagleBone**](#how-to-share-internet-with-the-beaglebone-via-usb-on-windows)
 
 -----------------
 

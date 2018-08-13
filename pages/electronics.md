@@ -25,7 +25,7 @@ title: Electronics
 The bike has several electronics components that will be detailed below.
 
 
-![Electrical Overview](https://github.com/bababash/chalmersbike/blob/master/wiki/Electrical%20Overview.svg)
+![Electrical Overview](../images/ElectricalOverview.svg)
 
 # Components
 * **BeagleBone Black Wireless** - this is the computer that implements the controller, communicates with all the sensors and  controls the actuators
@@ -48,14 +48,14 @@ The bike has several electronics components that will be detailed below.
 
 Here you can see an overview of the enclosure and the layout of all the components.
 
-![Enclosure Annotation](https://github.com/chalmersbike/chalmersbike/blob/master/wiki/Enclosure%20Annotation.jpg)
+![Enclosure Annotation](../images/EnclosureAnnotation.jpg)
 
 
 ## Schematic
 
 To interface all of these sensors and provide the correct voltages, several other components were required. The connections and components are detailed in the schematic below.
 
-![Schematic](https://github.com/bababash/chalmersbike/blob/master/wiki/BIKE_SCHEMATIC.sch.svg)
+![Schematic](../images/BIKE_SCHEMATIC.sch.svg)
 
 
 The major components are:
@@ -104,7 +104,7 @@ There are several components required:
 * KM1, KM2: **Schneider LC1D12BL 24VDC, 12A contactors**
 
 
-![Safety Relay Diagram](https://github.com/bababash/chalmersbike/blob/master/wiki/SafetyRelay.jpg)
+![Safety Relay Diagram](../images/SafetyRelay.jpg)
 
 The electrical setup was completed according to the [Omron manual for the safety relay: Section 5, Page 2](https://www.omron.com.au/data_pdf/mnu/g9se-201_-401_-221-t__inst-4022078-4c.pdf?id=3419).
 

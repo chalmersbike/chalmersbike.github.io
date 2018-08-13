@@ -1,6 +1,8 @@
 ---
 title: Electronics
 ---
+[Home](https://chalmersbike.github.io)
+
 
 <!--ts-->
    * [Overview:](#overview)

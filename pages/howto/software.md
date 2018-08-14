@@ -93,7 +93,7 @@ For a USB connection:
 
 Select `Deployment --> Upload To` and select the appropriate BeagleBone configuration. This will upload all of the modified and new files to the Beaglebone.
 
-<p align="center"><img src="../../images/pycharm_upload.JPG" width="400"></p>
+<p align="center"><img src="../../images/pycharm_upload.jpg" width="400"></p>
 
 # How to run code on the BeagleBone
 

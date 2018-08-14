@@ -82,4 +82,96 @@ You will need to use Texas Instruments [Code Composer Studio](http://www.ti.com/
 
 ## Important information
 
+### Beaglebone info:
+
+* Default USB IP: `192.168.7.1`
+
+* Default WiFi IP: `192.168.8.1`
+
+* Default Wifi Password: `BeagleBone`
+
+* BBB1 SSID = `BeagleBone-63C9`
+
+* BBB2 SSID = `BeagleBone-132D`
+
+* Login Username: `debian`
+
+* Login Password: `temppwd`
+
+### Beaglebone First Run:
+* Manually setup internet access:
+Connect the beaglebone via USB. 
+
+  On Windows set IP of BBB to `192.168.7.2` and gateway+DNS to `192.168.7.2` also make sure you are sharing your ethernet connection.
+  Follow the usb_internet.sh script:
+  
+  `sudo /sbin/route add default gw 192.168.7.1`
+  
+  `echo 'nameserver 192.168.7.1' | sudo tee --append /etc/resolv.conf`
+
+* Update, upgrade OS and Kernel
+
+  `sudo apt-get update`
+
+  `sudo apt-get upgrade`
+
+  `sudo reboot`
+
+  `cd /opt/scripts/tools`
+
+  `sudo ./update_kernel.sh`
+
+  `sudo reboot`
+
+
+### Internet Access
+To connect to the internet, attach the usb cable and run `usb_internet.sh` in the root folder
+
+## Using the repo
+
+Clone the repo
+
+`git clone https://github.com/bababash/chalmersbike.git`
+`cd chalmersbike`
+
+### Setup virtual environment and install required packages
+
+`sudo apt-get install build-essential libi2c-dev i2c-tools python-dev libffi-dev`
+
+`sudo pip install pipenv`
+
+`pipenv install --two`
+
+
+### Pin Configurations
+
+These are the pins to use for the external connections. Please refer to [Beaglebone Cape Pins](http://beagleboard.org/static/images/cape-headers.png) for a diagram
+
+* Shimano Steps: P8.10
+* SDA (IMU): P9.20
+* SCL (IMU): P9.19
+* UART TX (MSP430 RX P3.4): P9.24
+* UART RX (MSP430 TX P3.3): P9.26
+* Hall Sensor: P9.12
+* Encoder CH.A: P8.12
+* Encoder CH.B: P8.11
+* Encoder CH.I: P8.16
+* PWM Output (MSP430 P1.3): Jaguar Motor Controller
+
+### Initial setup
+To make sure all these pins are assigned to their proper functions, run `config_pin.sh`
+
+### Config stuff
+The beaglebone can be set to autorun the init codes on login. The file that must be changed is `/home/debian/.bashrc`
+The lines that must be added are:
+
+`cd ~/chalmersbike`
+
+`./config-pin.sh`
+
+`pipenv shell`
+
+`cd src`
+
+
 ## How to modify

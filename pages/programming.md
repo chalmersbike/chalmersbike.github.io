@@ -78,7 +78,11 @@ You will need to use Texas Instruments [Code Composer Studio](http://www.ti.com/
 
 # Bike Computer - Beaglebone Black
 
+A Beaglebone Black has been used to run all of the software on the bike.
+
 ## How it works
+
+The Beaglebone has a built-in wifi access point and multiple pins for sending and receiving signals. It runs debian linux.
 
 ## Important information
 
@@ -126,6 +130,14 @@ Connect the beaglebone via USB.
 
 ### Internet Access
 To connect to the internet, attach the usb cable and run `usb_internet.sh` in the root folder
+
+`cd ~/chalmersbike`
+
+`sudo ./usb_internet.sh`
+
+Enter the password `temppwd` when prompted
+
+Make sure you follow the instructions to [setup Windows to share internet over USB](https://chalmersbike.github.io/pages/howto/software.html#how-to-share-internet-with-the-beaglebone-via-usb-on-windows)
 
 ## Using the repo
 

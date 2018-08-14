@@ -152,23 +152,7 @@ Clone the repo
 
 `sudo pip install pipenv`
 
-`pipenv install --two`
-
-
-### Pin Configurations
-
-These are the pins to use for the external connections. Please refer to [Beaglebone Cape Pins](http://beagleboard.org/static/images/cape-headers.png) for a diagram
-
-* Shimano Steps: P8.10
-* SDA (IMU): P9.20
-* SCL (IMU): P9.19
-* UART TX (MSP430 RX P3.4): P9.24
-* UART RX (MSP430 TX P3.3): P9.26
-* Hall Sensor: P9.12
-* Encoder CH.A: P8.12
-* Encoder CH.B: P8.11
-* Encoder CH.I: P8.16
-* PWM Output (MSP430 P1.3): Jaguar Motor Controller
+`pipenv install --two` (We are using Python 2.7)
 
 ### Initial setup
 To make sure all these pins are assigned to their proper functions, run `config_pin.sh`

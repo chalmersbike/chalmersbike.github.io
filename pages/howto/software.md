@@ -6,12 +6,12 @@ title: How To - Software
 Table of Contents
 -----------------
 <!--ts-->
-   * [How to share internet with the BeagleBone via USB on Windows](#how-to-share-internet-with-the-beaglebone-via-usb-on-windows)
-   * [How to upload code to the BeagleBone from Pycharm](#how-to-upload-code-to-the-beaglebone-from-pycharm)
+   * [How to connect to the BeagleBone](#how-to-connect-to-the-beaglebone)
    * [How to start an ssh session with the BeagleBone](#how-to-start-an-ssh-session-with-the-beaglebone)
+   * [How to upload code to the BeagleBone from Pycharm](#how-to-upload-code-to-the-beaglebone-from-pycharm)
    * [How to run code on the BeagleBone](#how-to-run-code-on-the-beaglebone)
-            * [Example: we have a testing script in the testing/rear_motor folder](#example-we-have-a-testing-script-in-the-testingrear_motor-folder)
-   * [How to download results from the BeagleBone](#how-to-download-results-from-the-beaglebone)
+   * [How to download results from the BeagleBone](#how-to-download-results-from-the-beaglebone) 
+   * [How to share internet with the BeagleBone via USB on Windows](#how-to-share-internet-with-the-beaglebone-via-usb-on-windows)
 
 <!-- Added by: Boaz Ash, at: 2018-08-10T16:47+02:00 -->
 
@@ -19,38 +19,7 @@ Table of Contents
 
 -----------------
 
-# How to share internet with the BeagleBone via USB on Windows
-
-1. Plug the micro-USB cable into the BeagleBone
-
-2. Open Network Connections in the control panel. 
-
-    Alternatively enter this into the run window: `ncpa.cpl`
-
-3. Right click on the BeagleBone network adaptor and choose `Properties`. The correct adaptor can be identified by its device name, look for:  `Linux USB Ethernet/RNDIS Gadget` 
-
-<p align="center"><img src="../../images/BBB_NetworkConfig_2.JPG" width="400"></p>
-
-
-4. Modify the settings so they match this image and press OK.
-
-<p align="center"><img src="../../images/BBB_NetworkConfig.JPG" width="400"></p>
-
-5. Close the Properties window
-
-6. Right click on your primary network adaptor and choose `Properties`.
-
-7. Select the `Sharing` tab and modify the settings so they match this image and press OK. If prompted to change the IP of the Beaglebone, press Yes. You may have to repeat step 4 to get it working.
-
-<p align="center"><img src="../../images/BBB_NetworkConfig_3.JPG" width="400"></p>
-
-8. SSH into the Beaglebone and run the script `usb_internet.sh` located in the root directory of this repo.
-
-# How to upload code to the BeagleBone from Pycharm
-
-some text here
-
-# How to start an ssh session with the BeagleBone
+# How to connect to the BeagleBone
 
 1. Power on the BeagleBone
 
@@ -61,13 +30,20 @@ some text here
   OR
     
   b. Connecting to the BeagleBone WiFi access point. Depending on which BeagleBone you are using you will see one of the following access points:
-    * BBB1 SSID = `BeagleBone-63C9`
+  
+  ```
+    BBB1 SSID = BeagleBone-63C9
 
-    * BBB2 SSID = `BeagleBone-132D`
+    BBB2 SSID = BeagleBone-132D
+```
 
-3. Open an SSH client like [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/) or [MobaXterm](https://mobaxterm.mobatek.net/) (recommended)
+# How to start an ssh session with the BeagleBone
 
-4. Start an ssh session
+1. [Connect to the BeagleBone](#how-to-connect-to-the-beaglebone)
+
+2. Open an SSH client like [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/) or [MobaXterm](https://mobaxterm.mobatek.net/) (recommended)
+
+3. Start an ssh session
 
   a. If you connected using USB connect to `192.168.7.2`
 
@@ -80,6 +56,44 @@ some text here
   Password: `temppwd`
 
   Port: `22`
+
+# How to upload code to the BeagleBone from Pycharm
+
+1. You will need to ensure that Pycharm is configured to connect to the BeaglBone. If this has not been done please follow these instructions:
+
+Navigate to Tools -> Deployment -> Configuration
+---
+For a WiFi connection:
+
+   **Under the Connection Tab:**
+   
+   SFTP Host: `192.168.8.1`
+   Port: `22`
+   Root path: `/home/debian`
+   User name: `debian`
+   Password: `temppwd`
+
+   **Under the Mapings Tab:**
+   Deployment path on server: `/chalmersbike`
+   
+For a USB connection:
+
+   **Under the Connection Tab:**
+   
+   SFTP Host: `192.168.7.2`
+   Port: `22`
+   Root path: `/home/debian`
+   User name: `debian`
+   Password: `temppwd`
+
+   **Under the Mapings Tab:**
+   Deployment path on server: `/chalmersbike`
+
+2. In the Project view window of Pycharm (normally on the left), right click on the `src` folder.
+
+Select `Deployment --> Upload To` and select the appropriate BeagleBone configuration. This will upload all of the modified and new files to the Beaglebone.
+
+<p align="center"><img src="../../images/pycharm_upload.JPG" width="400"></p>
 
 # How to run code on the BeagleBone
 
@@ -116,3 +130,43 @@ some text here
     python rear_motor.py
 
 # How to download results from the BeagleBone
+
+In Pycharm:
+
+1. Select the following from the menu: `View -> Tool Windows -> Remote Host`
+
+2. On the right hand side of the screen you will see the Remote Host window. Navigate to the folder where your results are saved. This will likely be in a subfolder of `chalmersbike/src/`
+
+3. Right click on the file you are interested in and select `Download from here`
+
+4. On the left hand side of the screen are the local files on your computer. Find the local folder that corresponds to the folder where you downloaded the file from in the Remote Host window.
+
+5. (Optional) It is best if you move the file out of the git project folders and do data analysis eleswhere. The easiest way to do this is to right click on the file and select `Show in Explorer`. Then you can move the file to your folder of choice.
+
+# How to share internet with the BeagleBone via USB on Windows
+
+1. Plug the micro-USB cable into the BeagleBone
+
+2. Open Network Connections in the control panel. 
+
+    Alternatively enter this into the run window: `ncpa.cpl`
+
+3. Right click on the BeagleBone network adaptor and choose `Properties`. The correct adaptor can be identified by its device name, look for:  `Linux USB Ethernet/RNDIS Gadget` 
+
+<p align="center"><img src="../../images/BBB_NetworkConfig_2.JPG" width="400"></p>
+
+
+4. Modify the settings so they match this image and press OK.
+
+<p align="center"><img src="../../images/BBB_NetworkConfig.JPG" width="400"></p>
+
+5. Close the Properties window
+
+6. Right click on your primary network adaptor and choose `Properties`.
+
+7. Select the `Sharing` tab and modify the settings so they match this image and press OK. If prompted to change the IP of the Beaglebone, press Yes. You may have to repeat step 4 to get it working.
+
+<p align="center"><img src="../../images/BBB_NetworkConfig_3.JPG" width="400"></p>
+
+8. SSH into the Beaglebone and run the script `usb_internet.sh` located in the root directory of this repo.
+

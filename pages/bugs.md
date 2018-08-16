@@ -1,6 +1,21 @@
 ---
 title: Bugs and Troubleshooting
 ---
+
+* ## [Project Overview](pages/overview.html)
+
+* ## [Electronic Design](pages/electronics.html)
+
+* ## [Programming](pages/programming.html)
+
+* ## [Mechanical Design](pages/mechanical.html)
+
+* ## [Control](pages/control.html)
+
+* ## [How-To Guides](pages/howto/)
+
+* ## [Bugs and Troubleshooting](pages/bugs.html)
+
 <!--ts-->
    * [IMU waiting for calibration](#imu-waiting-for-calibration)
    * [Manually entering virtualenv](#manually-entering-virtualenv)

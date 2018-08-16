@@ -201,7 +201,7 @@ You can also verify that you are online by typing: `services` again. You should 
 
 More info:
 
-The symbols in the output above are: '*' favorite (saved) network, 'A' autoconnectable, 'O' online and 'R' ready. If no letter is shown in the O/R column, the network is not connected. In addition, temporary states include 'a' for association, 'c' configuration and 'd' disconnecting. When any of these three letters are showing, the network is in the process of connecting or disconnecting.
+>The symbols in the output above are: '*' favorite (saved) network, 'A' autoconnectable, 'O' online and 'R' ready. If no letter is shown in the O/R column, the network is not connected. In addition, temporary states include 'a' for association, 'c' configuration and 'd' disconnecting. When any of these three letters are showing, the network is in the process of connecting or disconnecting.
 
 https://wiki.archlinux.org/index.php/ConnMan
 

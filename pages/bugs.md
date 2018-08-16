@@ -2,19 +2,20 @@
 title: Bugs and Troubleshooting
 ---
 
-* ## [Project Overview](pages/overview.html)
+* [Project Overview](https://chalmersbike.github.io/pages/overview.html)
 
-* ## [Electronic Design](pages/electronics.html)
+* [Electronic Design](https://chalmersbike.github.io/pages/electronics.html)
 
-* ## [Programming](pages/programming.html)
+* [Programming](https://chalmersbike.github.io/pages/programming.html)
 
-* ## [Mechanical Design](pages/mechanical.html)
+* [Mechanical Design](https://chalmersbike.github.io/pages/mechanical.html)
 
-* ## [Control](pages/control.html)
+* [Control](https://chalmersbike.github.io/pages/control.html)
 
-* ## [How-To Guides](pages/howto/)
+* [How-To Guides](https://chalmersbike.github.io/pages/howto/)
 
-* ## [Bugs and Troubleshooting](pages/bugs.html)
+* [Bugs and Troubleshooting](https://chalmersbike.github.io/pages/bugs.html)
+---
 
 <!--ts-->
    * [IMU waiting for calibration](#imu-waiting-for-calibration)

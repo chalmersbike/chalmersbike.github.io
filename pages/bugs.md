@@ -15,6 +15,7 @@ title: Bugs and Troubleshooting
 * [How-To Guides](https://chalmersbike.github.io/pages/howto/)
 
 * [Bugs and Troubleshooting](https://chalmersbike.github.io/pages/bugs.html)
+
 ---
 
 <!--ts-->

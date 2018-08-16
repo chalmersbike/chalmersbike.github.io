@@ -2,6 +2,8 @@
 title: Bugs and Troubleshooting
 ---
 
+Menu:
+
 * [Project Overview](https://chalmersbike.github.io/pages/overview.html)
 
 * [Electronic Design](https://chalmersbike.github.io/pages/electronics.html)

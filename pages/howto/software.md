@@ -12,6 +12,8 @@ Table of Contents
    * [How to run code on the BeagleBone](#how-to-run-code-on-the-beaglebone)
    * [How to download results from the BeagleBone](#how-to-download-results-from-the-beaglebone) 
    * [How to share internet with the BeagleBone via USB on Windows](#how-to-share-internet-with-the-beaglebone-via-usb-on-windows)
+   * [How to connect the BeagleBone to a WiFi Hotspot](#how-to-connect-the-beaglebone-to-a-wifi-hotspot) 
+
 
 <!-- Added by: Boaz Ash, at: 2018-08-10T16:47+02:00 -->
 
@@ -170,3 +172,37 @@ In Pycharm:
 
 8. SSH into the Beaglebone and run the script `usb_internet.sh` located in the root directory of this repo.
 
+
+# How to connect the BeagleBone to a WiFi Hotspot
+
+After you have started a WiFi hotspot within range of the Beaglebone, you can connect to it as follows:
+
+`sudo connmanctl`
+
+Enter password `temppwd`
+
+`scan wifi`
+
+`services`
+
+You should now see your access point listed, for example, my access point appears as `BOAZ_WIFI2           wifi_f45eab3f63c6_424f415a5f5749464932_managed_psk`
+
+For this example, I need to run the following command
+
+`agent on`
+
+`connect wifi_f45eab3f63c6_424f415a5f5749464932_managed_psk`
+
+Then you will need to enter the password for the access point
+
+You should see a confirmation that says `Connected wifi_f45eab3f63c6_424f415a5f5749464932_managed_psk`
+
+You can also verify that you are online by typing: `services` again. You should see `AO` to the left of the accesspoint name.
+
+More info:
+
+The symbols in the output above are: '*' favorite (saved) network, 'A' autoconnectable, 'O' online and 'R' ready. If no letter is shown in the O/R column, the network is not connected. In addition, temporary states include 'a' for association, 'c' configuration and 'd' disconnecting. When any of these three letters are showing, the network is in the process of connecting or disconnecting.
+
+https://wiki.archlinux.org/index.php/ConnMan
+
+https://01.org/connman/documentation

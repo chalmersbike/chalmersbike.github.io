@@ -157,6 +157,8 @@ In Pycharm:
 
 2. On the right hand side of the screen you will see the Remote Host window. Navigate to the folder where your results are saved. This will likely be in a subfolder of `chalmersbike/src/`
 
+NOTE: You may need to press the refresh button for your files to appear
+
 3. Right click on the file you are interested in and select `Download from here`
 
 4. On the left hand side of the screen are the local files on your computer. Find the local folder that corresponds to the folder where you downloaded the file from in the Remote Host window.

@@ -152,14 +152,14 @@ Max Output Current = 10 A
 
 **Controller Mode of Operation:** 
 
-`Current Control`
+`Speed Control`
 
 **Set value**
 
 RC Servo input:
 ```
-1 ms = -4.12 A
-2 ms = +4.12 A
+1 ms = -8000 RPM (MSP430 PWM signal = 1050)
+2 ms = +8000 RPM (MSP430 PWM signal = 2100)
 ```
 
 
@@ -171,6 +171,7 @@ We are using a *Shimano STePS* motor on this bike. It is a brushless DC motor an
 ```
 Internal resistance = 0.1 Ohm
 Inductance = 195 uH
+Nominal current draw = 3.3 A (crudely measured)
 ```
 
 The motor is connected to a [Maxon ESCON Module 50/4 EC-S motor controller](https://www.maxonmotor.com/medias/sys_master/root/8818449317918/446925-ESCON-Module-50-4-EC-S-Hardware-Reference-En.pdf). 
@@ -182,11 +183,15 @@ Configuring the controller took a bit of trial and error. The settings that have
 Speed Constant = 814.2 RPM/V
 Thermal Time Constant Winding = 4.0 s
 Number of Pole Pairs = 1
+Minimum Speed = ~1.69 m/s (3600 RPM)
+Maximum Speed = ~8.20 m/s (18000 RPM)
+
+Acceleration and Deceleration ramp: 3000 RPM/S
 ```
 
 **System Data**
 ```
-Max. Permissible Speed = 20000 RPM
+Max. Permissible Speed = 18000 RPM
 Nominal Current = 4 A
 Max. Output Current Limit = 10 A
 ```
@@ -195,8 +200,8 @@ Max. Output Current Limit = 10 A
 
 RC Servo input:
 ```
-1 ms = 0 RPM
-2 ms = 20000 RPM
+1 ms = 0 RPM (MSP430 PWM signal = 1050)
+2 ms = 18000 RPM (MSP430 PWM signal = 2100)
 ```
 
 **Minimal Speed / Stall Behaviour**
@@ -210,6 +215,10 @@ n_min = (Vcc * Kn) / 7
 where: 
 
 Vcc = 25 V and Kn = 1000 RPM/V
+
+3600 RPM = 1.2 ms (equivalent to MSP430 PWM input of 1265)
+
+Note that the motor controller resticts 3600 RPM as the MINIMUM motor speed. This is equivalent to: 1.69 m/s (measured with bike suspended in the air)
 ```
 
 

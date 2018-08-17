@@ -80,5 +80,6 @@ You can check the current time by typing:
 
 ## How to manually set the date and time
 
-To set the day: `date --set 1998-11-02` (In the format YYYY-MM-DD)
-To set the time: `date --set 21:08:00` (In the format HHMMSS using 24 hour clock)
+To set the day: `sudo date --set 1998-11-02` (In the format YYYY-MM-DD)
+
+To set the time: `sudo date --set 21:08:00` (In the format HHMMSS using 24 hour clock)

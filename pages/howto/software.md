@@ -131,6 +131,9 @@ Select `Deployment --> Upload To` and select the appropriate BeagleBone configur
 
     `~/chalmersbike/src` is the current folder
 
+If this is not the case, please see the [instructions on how to manually enter a virtualenv](https://chalmersbike.github.io/pages/bugs.html#manually-entering-virtualenv)
+
+
   3. Navigate to the folder containing your code:
 
       `cd foldercontainingcode`
@@ -148,6 +151,43 @@ Select `Deployment --> Upload To` and select the appropriate BeagleBone configur
     cd testing/rear_motor
     
     python rear_motor.py
+
+## How to debug code on the Beaglebone
+
+If you want to test a new module or manually set a motor speed or manually read bike velocity:
+
+1. Navigate to the `src` folder
+
+>`cd ~/chalmersbike/src`
+
+2. Open python or bpython
+
+>`python` or `bpython`
+
+3. Import the bike class
+
+>`from bike import Bike`
+
+4. Instantiate the class
+
+>`bike = Bike()`
+
+This will automatically open the bike in debugging mode.
+
+5. Run your command
+
+For example, if you want to check the velocity:
+
+>`bike.get_velocity()`
+
+If you want to set the longitudinal velocity:
+
+>`bike.rear_motor.set_velocity(2)`
+>Sets the rear motor to 2m/s
+
+If you want to measure the lean angle:
+
+>`bike.get_imu_data()`
 
 # How to download results from the BeagleBone
 

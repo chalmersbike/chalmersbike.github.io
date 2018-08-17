@@ -83,3 +83,20 @@ You can check the current time by typing:
 To set the day: `sudo date --set 1998-11-02` (In the format YYYY-MM-DD)
 
 To set the time: `sudo date --set 21:08:00` (In the format HHMMSS using 24 hour clock)
+
+
+## How to kill tasks
+
+If you want to end a task
+
+>`sudo htop`
+
+>Enter password `temppwd`
+
+>Find the task that you want to kill by using the up/down arrows. This example will assume it is a python script that hasn't terminated properly.
+
+Once the task has been selected
+
+>Press `F9`
+
+>Press `ENTER` (on the left you will see "SIGTERM" highlighted)

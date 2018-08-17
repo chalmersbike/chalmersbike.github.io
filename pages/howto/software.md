@@ -189,6 +189,10 @@ If you want to measure the lean angle:
 
 >`bike.get_imu_data()`
 
+6. When you are finished, you should exit python. You do this by pressing
+
+`CTRL + D`
+
 # How to download results from the BeagleBone
 
 In Pycharm:

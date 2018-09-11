@@ -53,4 +53,13 @@ The second section of the initialization code is to generate performance plots a
 
 There are several switches in the Simulink model:
 
-
+SWITCH | EXPLANATION
+------ | -----------
+Sensor Noise Switch | activates noises on the sensors (noise values can be set from the sensor blocks)
+Look Ahead Switch | activates look ahead path control (look ahead path control is experimental and not finalized yet)
+Shimano Motor Dynamics | activates the transfer function block in the Shimano motor block (to simulate the real life characteristics of the Shimano motor, transfer function is different for each motor, so should be changed for another bike)
+Motor Delay & Dead-Band Switch | activates the delat and dead band in the steering motor
+Reference Velocity Selector | switches between constant reference velocity or predetermined velocity reference profiles
+Kalman Filter Switch | activates the Kalman filter
+Estimated or True Position Switch | switches between estimated and true positions for the path control (includes or excludes the noises of the sensors)
+Estimated or True Heading Switch | switches between estimated and true heading angles for the path control (includes or excludes the noises of the sensors)

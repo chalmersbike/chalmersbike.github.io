@@ -24,7 +24,7 @@ Please see the article [Modelling and control of an Autonomous Bicycle](../docs/
 
 Simulink model is available [here](https://github.com/chalmersbike/simulink). To run the Simulink model (bike_model.slx), the first section of the initialization code (bike_init.m) should be run first. Simulink version should be at least 2018a.
 
-After this point, the following information is not up-to-date. But most of the information is still applicable. If you have any question please don't hesitate to ask to the owner of the repository (Umur E., umure@student.chalmers.se).
+If you have any question please don't hesitate to ask to the owner of the repository (Umur E., umure@student.chalmers.se).
 
 There are several parameters that need to be change for each bike or simulation in the bike_init.m file:
 

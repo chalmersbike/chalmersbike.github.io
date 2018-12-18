@@ -28,40 +28,52 @@ After this point, the following information is not up-to-date. But most of the i
 
 There are several parameters that need to be change for each bike or simulation in the bike_init.m file:
 
+
 PARAMETER       | EXPLANATION
 ---------       | -----------
-input_velocity  | constant forward velocity input
-Dead_Band       | steering motor dead band characteristics
-discrete        | 1 if the simulation is discrete, 0 if the simulation is continuous
-Ts              | sample time of the simulation
-delay           | delay in the steering motor
-plots           | plots for eigenvalues of the system ( A - B * K) and plot for the path
-radius          | radius of the path if the path is circle 
+sim_time           | simulation time [s]
+initial_states     | initial states of the bike at t=0 [roll angle in rad, steering angle in rad, roll rate in rad/s]          
+input_velocity     | reference speed of the bicycle [m/s]
+min_max_velocity   | if variable velocity is used in the simulation, min and max values of the reference velocity profile should be specified here for calculating corresponding dynamics [m/s]
+noise              | 1=enable noise on the sensors, 0=disable noise
+look_ahead         | 1=enable look-ahead path control, 0=disable (EXPERIMENTAL, NOT FINALIZED!)
+fork_dynamics_lqr  | 1=take fork dynamics into consideration for LQR calculation 0=don't consider fork dynamics for LQR
+forward_motor_dynamics     | 1=enable forward motor dynamics, 0=disable
+steering_motor_limitations | 1=enable limitations (deadband, delay), 0=disable
+path_tracking=1;  | 1=path tracking, 0=only self balancing, no path tracking
+plant_model       | 1=nonlinear plant, 2=linear plant, 3=linear plant with neglected fork angle (the simplest plant)
+roll_acceleration_calculation   | 1=derivate roll rate, 0=use the model to estimate
+Ts           | sample time of the controller [sec]
+Ts_IMU       | sample time of the IMU [sec]
+Dead_Band                        | deadband characteristics for steering motor [Dead Band Limit(+,-), Relay], [rad/sec]
+max_steering_motor_acc           | maximum steering motor acceleration [rad/s^2]
+min_steering_motor_acc           | minimum steering motor acceleration [rad/s^2]
+max_steering_motor_speed   | maximum steering motor velocity [rad/s]
+min_steering_motor_speed   | minimum steering motor velocity [rad/s]
+delay                      | delay of steering motor [sec]
+complementary                    | complementary filter coefficient (0.5<c<1) %0.995
+roll_rate_coef                   | coefficient of the low pass filter at the gyro output %0.8
+noise_hall                       | variance of hall sensor noise
+noise_encoder                    | variance of steering motor encoder noise
+noise_gyro                       | variance of gyroscope noise
+noise_acc                        | variance of noise of roll angle estimation based on accelerometer                               
+max_roll                     | maximum roll angle permitted [rad] // otherwise simulation stops
+max_handlebar                | maximum handlebar angle [rad] before the saturation
+min_roll                     | minimum roll angle permitted [rad] // otherwise simulation stops
+min_handlebar                | minumum handlebar angle [rad] before the saturation
+h             | height of the center of mass (see the paper for more details)
+b             | length between the wheel centers (see the paper for more details)
+a             | horizontal distance from rear wheel to the center of the mass (see the paper for more details)
+c             | length between front wheel contact point and the extention of the fork axis [m]
+lambda        | angle of the fork axis [rad]
+IMU_height    | IMU height [m]    
+Q               | cost of the states for the LQR controller
+R               | cost of the inputs for the LQR controller
+plots          | Set to 1 to see the plots [eigenvalue plot, path plot]
+radius          | radius of the path if the path is circle [m]
 x_ini_diff      | initial off-set in x direction for the reference path
 y_ini_diff      | initial off-set in y direction for the reference path
 path            | path to be followed, out of 9 pre-determined paths
-MAX_ROLL            | maximum roll angle to stop the simulation
-MAX_HANDLEBAR_ANGLE | maximum handlebar angle (saturates beyond this limit)
-MIN_ROLL            | minimum roll angle to stop the simulation
-MIN_HANDLEBAR_ANGLE | minimum handlebar angle (saturates beyond this limit)
-h | height of the center of mass (see the paper for more details)
-b | length between the wheel centers (see the paper for more details)
-a | horizontal distance from rear wheel to the center of the mass (see the paper for more details)
-Q               | cost of the states for the LQR controller
-R               | cost of the inputs for the LQR controller
-Qn, Rn, H, G, N | Kalman filter parameters 
 
 The second section of the initialization code is to generate performance plots after simulation and the third section is to generate plots for comparing the real test results and the simulation results.
 
-There are several switches in the Simulink model:
-
-SWITCH | EXPLANATION
------- | -----------
-Sensor Noise Switch | activates noises on the sensors (noise values can be set from the sensor blocks)
-Look Ahead Switch | activates look ahead path control (look ahead path control is experimental and not finalized yet)
-Shimano Motor Dynamics | activates the transfer function block in the Shimano motor block (to simulate the real life characteristics of the Shimano motor, transfer function is different for each motor, so should be changed for another bike)
-Motor Delay & Dead-Band Switch | activates the delat and dead band in the steering motor
-Reference Velocity Selector | switches between constant reference velocity or predetermined velocity reference profiles
-Kalman Filter Switch | activates the Kalman filter
-Estimated or True Position Switch | switches between estimated and true positions for the path control (includes or excludes the noises of the sensors)
-Estimated or True Heading Switch | switches between estimated and true heading angles for the path control (includes or excludes the noises of the sensors)

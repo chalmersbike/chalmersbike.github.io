@@ -20,17 +20,81 @@ Menu:
 
 ---
 
-Please see the article [Modelling and control of an Autonomous Bicycle](../docs/Modelling%20and%20control%20of%20an%20Autonomous%20Bicycle.pdf) for an in depth discussion of the bike model and the development of our controller.
+This wiki page is about the simulation of Chalmers Autonomous Bicycle Project.
 
-Simulink model is available [here](https://github.com/chalmersbike/simulink). To run the Simulink model (bike_model.slx), the first section of the initialization code (bike_init.m) should be run first. Simulink version should be at least 2018a.
+# THEORETICAL BACKGROUND
+
+Please see the  following articles for the details of control scheme used in this bike simulations:
+
+[Modelling and control of an Autonomous Bicycle](../docs/Modelling%20and%20control%20of%20an%20Autonomous%20Bicycle.pdf)
+
+[Bicycle Dynamics and Control](https://lup.lub.lu.se/search/ws/files/4692388/625565.pdf)
+
+# FILES IN THE REPOSITORY
+
+Simulink model is available [here](https://github.com/chalmersbike/simulink). There are 2 files to run:
+
+FILE NAME       | EXPLANATION
+---------       | -----------
+bike_init.m     | Matlab m file to initialize the simulation variables and take the graphical results.
+bike_model.slx  | Simulink file for the simulation. (Matlab 2018a is required.)
+
+Please put all files to the same directory and be sure that your Matlab version is at least Matlab 2018a.
+
+# A SHORT INTRODUCTION TO INITIALIZATION CODE
+
+In bike_init.m file there are 4 sections of the code:
+
+SECTION    | EXPLANATION
+---------  | -----------
+1          | Initializes the simulation variables and settings. It should be run before the simulation. It also plots the path to be followed and eigenvalues of the system for stability analysis. Plots can be turned off and on depending on the choice.
+2          | Runs the Simulink simulation (by calling bike_model.slx file).
+3          | It should be run after the simulation. It gives "reference path vs followed path" and "bike path errors" graphs. Plots can be turned off and on depending on the choice.
+4          | It is for generating plots where real test and simulation results are presented together. Do not use it if you don't want to compare real test and simulation results. It requires the real test files in csv format. In default, this section is turned off, so the code file skip that part.
+
+One can run bike_init.m file all together at once; in this case, simulation variables and settings will be created, simulation will run automatically, and then resulting plots will be automatically created. Another option is to run the first section of the bike_init.m, and then to run bike_model.m file manually. By this, one can locate scopes to certain signals to have particular results. Then third section of the bike_init.m can be run after simulation for further plots for the results.
+
+# A SHORT INTRODUCTION TO SIMULATION
+
+Simulation file bike_model.slx has several important blocks that represent:
+
+BLOCK                     | TYPE               | EXPLANATION
+---------                 | -----------        | -----------
+physical bicycle          | bike               | without sensor or actuators
+forward velocity motor    | actuator           | actuates the bike to front direction
+steering motor            | actuator           | steers the steering bar
+hall effect sensor        | sensor             | measures the forward speed
+inertial measurement unit | sensor             | measures the roll angle and roll rate
+steering encoder          | sensor             | measures steering angle
+balance controller        | controller         | controls the bike so that it balances itself, calculates the steering input (steering rate)
+path controller           | controller         | controls the bike so that it follows a predetermined trajectory, calculates the reference steering angle to follow the path
+global coordinate calculator| calculation      | calculates the global coordinates of the bicycle
+
+# A MORE DETAILED EXPLANATION OF THE SIMULATION
+
+This simulation is intended to simulate the dynamics of the real bike. So, one needs to include every kind of detail that esixt in the real life, like sensor noise, signal delay, dead-band, hysterisis, maximum acceleration limitations, etc.
+
+In the following table, real life limitations and details taken into consideration for each sub-system of the bicycle is presented:
+
+BLOCK                     | DETAILS
+---------                 | ----------- 
+physical bicycle          | several different plant models are possible to simulate (linear, nonlinear, etc)
+forward velocity motor    | dynamics of the forward velocity motor (designed as a transfer function)
+steering motor            | max/min speed, max/min acceleration, dead-band, hysteresis, delay, max/min steering angle permitted
+hall effect sensor        | noise on the measurements, minimum possible measurement
+inertial measurement unit | noise on the accelerometer and gyroscope measurements, several different filters to estimate the roll angle, different sampling time then the rest of the components, dimensions of the point where IMU is placed can be specified
+steering encoder          | noise of the measurements
+balance controller        | different plant models are available to calculate the LQR control law
+path controller           | an experimental look-forward path planning alghoritm is available (NOT FINALIZED!)
+
 
 If you have any question please don't hesitate to ask to the owner of the repository (Umur E., umure@student.chalmers.se).
 
 There are several parameters that need to be change for each bike or simulation in the bike_init.m file:
 
 
-PARAMETER       | EXPLANATION
----------       | -----------
+PARAMETER          | EXPLANATION
+---------          | -----------
 sim_time           | simulation time [s]
 initial_states     | initial states of the bike at t=0 [roll angle in rad, steering angle in rad, roll rate in rad/s]          
 input_velocity     | reference speed of the bicycle [m/s]
@@ -75,5 +139,5 @@ x_ini_diff      | initial off-set in x direction for the reference path
 y_ini_diff      | initial off-set in y direction for the reference path
 path            | path to be followed, out of 9 pre-determined paths
 
-The second section of the initialization code is to generate performance plots after simulation and the third section is to generate plots for comparing the real test results and the simulation results.
+
 

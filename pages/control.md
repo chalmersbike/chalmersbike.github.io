@@ -20,7 +20,7 @@ Menu:
 
 ---
 
-This wiki page is about the simulation of Chalmers Autonomous Bicycle Project.
+This wiki page is about the simulation of Chalmers Autonomous Bicycle Project. If you have any question please don't hesitate to ask to the owner of the repository (Umur E., umure@student.chalmers.se).
 
 # THEORETICAL BACKGROUND
 
@@ -29,6 +29,8 @@ Please see the  following articles for the details of control scheme used in thi
 [Modelling and control of an Autonomous Bicycle](../docs/Modelling%20and%20control%20of%20an%20Autonomous%20Bicycle.pdf)
 
 [Bicycle Dynamics and Control](https://lup.lub.lu.se/search/ws/files/4692388/625565.pdf)
+
+In this simulation, a bicycle is controlled by 2 controllers in a loop is simulated. An LQR controller is used to balance the bicycle. It calculates the input for the bike to keep it balanced. Another controller (which includes several PID controllers in a loop) is used to calculate the reference stering angle for path tracking. Calculated reference steering angle is sent to LQR controller as a reference.
 
 # FILES IN THE REPOSITORY
 
@@ -66,13 +68,13 @@ steering motor            | actuator           | steers the steering bar
 hall effect sensor        | sensor             | measures the forward speed
 inertial measurement unit | sensor             | measures the roll angle and roll rate
 steering encoder          | sensor             | measures steering angle
-balance controller        | controller         | controls the bike so that it balances itself, calculates the steering input (steering rate)
-path controller           | controller         | controls the bike so that it follows a predetermined trajectory, calculates the reference steering angle to follow the path
+balance controller        | controller         | an LQR controller that controls the bike so that it balances itself, calculates the steering input (steering rate)
+path controller           | controller         | series of PID controllers that control the bike so that it follows a predetermined trajectory, calculates the reference steering angle to follow the path
 global coordinate calculator| calculation      | calculates the global coordinates of the bicycle
 
 # A MORE DETAILED EXPLANATION OF THE SIMULATION
 
-This simulation is intended to simulate the dynamics of the real bike. So, one needs to include every kind of detail that esixt in the real life, like sensor noise, signal delay, dead-band, hysterisis, maximum acceleration limitations, etc.
+This simulation is intended to simulate the dynamics of the real bike. So, one needs to include every kind of detail that exist in the real life, like sensor noise, signal delay, dead-band, hysterisis, maximum acceleration limitations, etc.
 
 In the following table, real life limitations and details taken into consideration for each sub-system of the bicycle is presented:
 
@@ -87,11 +89,11 @@ steering encoder          | noise of the measurements
 balance controller        | different plant models are available to calculate the LQR control law
 path controller           | an experimental look-forward path planning alghoritm is available (NOT FINALIZED!)
 
+There are several different types of the paths created for the simulations. Simplest paths are straight and circular paths. Raidus of the circular path can be scpecified. Another option is to make a simulation with no path tracking, only with self-balancing control.
 
-If you have any question please don't hesitate to ask to the owner of the repository (Umur E., umure@student.chalmers.se).
+## Parameters Set in the bike_init.m File 
 
-There are several parameters that need to be change for each bike or simulation in the bike_init.m file:
-
+There are several parameters that need to be change for each bike or simulation in the bike_init.m file. In the first section, which needs to be run before the simulation, the following parameters exist:
 
 PARAMETER          | EXPLANATION
 ---------          | -----------
@@ -139,5 +141,11 @@ x_ini_diff      | initial off-set in x direction for the reference path
 y_ini_diff      | initial off-set in y direction for the reference path
 path            | path to be followed, out of 9 pre-determined paths
 
+In the second section of the bike_init.m, simulation file (bike_model.slx) is called automatically. At the thirds section, 2 plots are created, by setting the following parameters to 1:
 
+PARAMETER          | EXPLANATION
+---------          | -----------
+Bike_Path_vs_Reference_Path | Set to 1 to see bike path vs reference path, set 0 to turn it off
+Bike_Path_Error_Inscpection | Set to 1 to see bike path errors, set 0 to turn it off
 
+Hence, thirds section of the code should be run after the simulation.

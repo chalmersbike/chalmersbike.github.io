@@ -148,4 +148,4 @@ PARAMETER          | EXPLANATION
 Bike_Path_vs_Reference_Path | Set to 1 to see bike path vs reference path, set 0 to turn it off
 Bike_Path_Error_Inscpection | Set to 1 to see bike path errors, set 0 to turn it off
 
-Hence, thirds section of the code should be run after the simulation.
+Hence, third section of the code should be run after the simulation.
